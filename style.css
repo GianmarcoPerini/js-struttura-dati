@@ -1,3 +1,21 @@
 ul{
     list-style: none
 }
+
+.title{
+    background-color: red
+}
+.img-space{
+    height: 200px;
+    background-color: blue
+}
+
+#card{
+    width: 300px;
+}
+
+.card-box{
+    border: 2px solid black;
+    box-shadow: 10px 10px 20px rgb(163, 163, 163);
+    padding: 10px 10px
+}

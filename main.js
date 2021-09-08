@@ -18,7 +18,7 @@ let card = {
         return sum
     },
     type: "Artifact Creature",
-    sunType: "Snake",
+    subType: "Snake",
     expansion: {
         name: "Throne of Eldrain",
         rarity: "Rare"
@@ -67,12 +67,34 @@ let card = {
 }
 
 let cardHTML = 
-`<ul class="d-flex">
-    <li>ciao</li>
-    <li>come</li>
-    <li>stai</li>
-    <li></li>
-</ul>`
+`<div class="d-flex justify-content-between align-items-center">
+    <h3>${card.name}</h3>
+    <h5>${card.combinedManaCost()}</h5>
+</div>
+<div class="img-space h-100">
+    <img class="w-100" src="img/magicPH.jpg" alt="">
+</div>
+
+<div class="d-flex justify-content-between align-items-center">
+    <p>${card.type} - ${card.subType}</p>
+    <p>${card.expansion.name}</p>
+</div>
+<div class="description">
+    <p>${card.abilities.splel1.description}</p>
+    <p>${card.abilities.splel2.description}</p>
+</div>
+<hr>
+<div class="d-flex">
+    <div class="flex-grow-1">
+        <p class="mb-0">${card.infoCard.collection.cardNumber}/${card.infoCard.collection.cardTotal}</p>
+        <p class="mb-0">${card.infoCard.artist.name} ${card.infoCard.artist.surname}</p>
+    </div>
+    <div class="flex-grow-1 text-end">
+    <p class="mb-0">${card.trait.strength}/${card.trait.const}</p>
+    </div>
+</div>
+
+` 
 
 
 document.getElementById("card").innerHTML += cardHTML
